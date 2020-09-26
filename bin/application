@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require dirname(__DIR__).'/vendor/autoload.php';
+
+use App\Command\RandomCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application();
+
+$app->add(new RandomCommand());
+$app->run();

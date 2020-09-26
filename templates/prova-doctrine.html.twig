@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} 2 - Interazione con Doctrine: {% endblock %}
+
+{% block body %}
+  {% if utenti %}
+    {% for msg in app.flashes('success') %}
+        <div class="rounded alert alert-success">
+            {{msg}}
+        </div>
+    {% endfor %}
+
+    <table id="utenti" class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Cognome</th>
+          <th>Email</th>
+          <th>Gruppo</th>  
+        </tr>
+      </thead>
+      <tbody>
+        {% for utente in utenti %}
+          <tr>
+            <td>{{ utente.id }}</td>
+            <td>{{ utente.nome }}</td>
+            <td>{{ utente.cognome }}</td>
+            <td>{{ utente.email }}</td>
+            <td>{{ utente.gruppo }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <h1>Non ci sono utenti :(</h1>
+    <a href={{ path('crea-utenti') }}>Crea un utente!</a>   
+  {% endif %}
+{% endblock %}

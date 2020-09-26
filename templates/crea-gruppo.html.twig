@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    2 - Interazione con Doctrine:
+{% endblock %}
+{% block body %}
+    {% for msg in app.flashes('success') %}
+        <div class="rounded alert alert-success">
+            {{msg}}
+        </div>
+    {% endfor %}
+    <h1>Crea un gruppo!</h1>
+    {{ form(form) }}
+{% endblock %}

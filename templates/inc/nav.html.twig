@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand">Test</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href={{ path('prova-twig') }}/utente>1 - Interazione con Twig </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">2 - Interazione con Doctrine</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href={{ path('crea-utenti') }}>Crea un utente</a>   
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href={{ path('crea-gruppo') }}>Crea un gruppo</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href={{ path('prova-doctrine') }}>Visualizza utenti</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={{ path('prova-symfony') }}>3 - TwigExtension e Servizi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
